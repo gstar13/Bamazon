@@ -58,10 +58,10 @@ inquirer.prompt([
 
                     console.log("There are now " + amtRemaining + " " + itemData.product_name + " remaining.");
                     console.log("Your total is: $" + (qty * itemData.price));
-                    // var updateQuery = "UPDATE products SET ? WHERE ?  ";
-                    // connection.query(updateQuery, {stock_quantity: amtRemaining}, {item_id:itemData.item_id},function (err, res) {
-                    //    if (err) throw err;
-                    //    })
+                    var updateQuery = "UPDATE products SET ? WHERE ?  ";
+                    connection.query(updateQuery, {stock_quantity: amtRemaining}, {item_id:itemData.item_id},function (err, res) {
+                       if (err) throw err;
+                       })
                 }
             }
         })
