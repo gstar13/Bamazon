@@ -57,19 +57,14 @@ inquirer.prompt([
                     var itemData = res[0];
 
                     console.log("There are now " + amtRemaining + " " + itemData.product_name + " remaining.");
-                    console.log("Your total is: $"+ (qty*itemData.price));
+                    console.log("Your total is: $" + (qty * itemData.price));
                     // var updateQuery = "UPDATE products SET ? WHERE ?  ";
                     // connection.query(updateQuery, {stock_quantity: amtRemaining}, {item_id:itemData.item_id},function (err, res) {
                     //    if (err) throw err;
-                //    })
+                    //    })
                 }
             }
         })
-
-
-
-
-
     })
 function exitStrategy() {
 
@@ -81,13 +76,9 @@ function readProducts() {
     connection.query("SELECT * FROM products", function (err, res) {
         if (err) throw err;
         console.log("Available Products At G's BAMAZON STORE");
-        //  console.log("Item ID------Product Name-------Available Quantity---------Price");
-
-
         //Log all results of the Select statement
         for (var i = 0; i < res.length; i++) {
             var productData = res[i];
-
             console.table("Item ID: " + productData.item_id);
             console.table("Product Name: " + productData.product_name);
             console.table("Available Quantity: " + productData.stock_quantity);
