@@ -54,21 +54,19 @@ inquirer.prompt([
                 }
                 else {
                     var amtRemaining = itemData.stock_quantity - qty;
-                    console.log("There are now "+ amtRemaining+ " "+ itemData.product_name + " remaining." );
+                    var itemData = res[0];
+
+                    console.log("There are now " + amtRemaining + " " + itemData.product_name + " remaining.");
+                    console.log("Your total is: $"+ (qty*itemData.price));
+                    // var updateQuery = "UPDATE products SET ? WHERE ?  ";
+                    // connection.query(updateQuery, {stock_quantity: amtRemaining}, {item_id:itemData.item_id},function (err, res) {
+                    //    if (err) throw err;
+                //    })
                 }
             }
         })
 
 
-        //     //     var updateQuery = "UPDATE products WHERE ?  ";
-        //     //     connection.query(updateQuery,{itemData.stock_quantity : qty}, function (err, res) {
-        //     //         if (err) throw err;;
-        //     //         console.log( "The new item quantity is " + )
-        //     //     })
-
-        //     // }
-
-        // }
 
 
 
