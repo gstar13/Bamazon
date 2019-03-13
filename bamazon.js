@@ -27,7 +27,7 @@ inquirer.prompt([
     {
         type: "input",
         name: "productUnits",
-        message: "How many units would you like."
+        message: "How many units would you like?"
     },
 
 ])
