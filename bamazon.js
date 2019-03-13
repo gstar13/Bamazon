@@ -63,17 +63,7 @@ inquirer.prompt([
                     connection.query(updateQuery, function (err, res) {
                         if (err) throw err;
                    exitStrategy();
-                       // console.log("Available Products At G's BAMAZON STORE");
-                        //Log all results of the Select statement
-                        // for (var i = 0; i < res.length; i++) {
-                        //     var productData = res[i];
-                        //     console.table("Item ID: " + productData.item_id);
-                        //     console.table("Product Name: " + productData.product_name);
-                        //     console.table("Available Quantity: " + productData.stock_quantity);
-                        //     console.table("Price: " + productData.price);
-                        //     console.log("-----------------------------------------------------------------------");
-                            
-                        // }
+                      
                     })
 
                     }
